@@ -1,0 +1,35 @@
+ {{#each things}}
+<div class="container">
+    <p>
+        <i> Article #: {{@key}} </i>
+    </p>
+    <p id="titleinput">
+        <h2>" {{title}} "</h2>
+    </p>
+    <b>Article URL</b>
+    <a href="{{link}}">
+        <br>
+        <p id="link">{{link}}</p>
+    </a>
+
+    <div id="notes" onclick="stuff()">
+    </div>
+
+    <div id="articles">
+    </div>
+
+    <div id="titleinput">
+    </div>
+
+
+    <div class="modal-footer">
+        <div class="container">
+            <div class="row">
+                <button type="button" class="btn btn-primary btn-sm" id="save-btn">Save Article</button>
+            </div>
+
+
+        </div>
+        <button type="button" data-id="{{_id}}" class="btn btn-primary" id="note-btn">Post a note</button>
+    </div>
+    {{/each}}
